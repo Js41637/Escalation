@@ -1,1 +1,0 @@
-angular.module('tf2', ['TF2.controllers.main', 'TF2.directives.lazyload'])
