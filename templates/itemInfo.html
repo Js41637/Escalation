@@ -1,17 +1,23 @@
+<!-- TEMPLATE FILE -->
+<!-- 
+Used by angular and filled with details about item for
+every item all using the same template
+-->
 <div class="box-things">
-<div>
-  <div class="itemimg" style="margin-left:auto;margin-right:auto" lazy-load="img/weapons/{{item.img}}.png"></div>
-</div>
-<div style="text-align:center">
-  <h3>{{item.name}}</h3>
-</div>
-<div class="desc">
-  <i>{{item.desc}}</i>
-</div>
-<div class="upgrades">
-  <ul>
-    <li class="att_positive" ng-repeat="positive in item.positive">{{positive.name}}</li>
-    <li class="att_negative" ng-repeat="negative in item.negative">{{negative.name}}</li>
-  </ul>
-</div>
+  <div>
+    <div class="itemimg" style="margin-left:auto;margin-right:auto" lazy-load="img/weapons/{{item.img}}.png"></div>
+  </div>
+  <div style="text-align:center">
+    <h3>{{item.name}}</h3>
+  </div>
+  <div class="desc">
+    <i>{{item.desc}}</i>
+  </div>
+  <div class="upgrades">
+    <ul>
+      <!-- Repeat list for every positive and negative effect -->
+      <li class="att_positive" ng-repeat="positive in item.positive">{{positive.name}}</li>
+      <li class="att_negative" ng-repeat="negative in item.negative">{{negative.name}}</li>
+    </ul>
+  </div>
 </div>

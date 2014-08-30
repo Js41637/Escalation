@@ -2,8 +2,11 @@
  * Thanks to code from DuckieTV
  * SchizoDuckie 2014
  */
+
+ // Register as angular module
 angular.module('TF2.directives.lazyload', [])
 
+//Create directive
 .directive('lazyLoad', function($document, $parse) {
     return {
         restrict: 'A',
@@ -13,7 +16,7 @@ angular.module('TF2.directives.lazyload', [])
 
             /** 
              * Observe the lazy-background attribute so that when it's set on a rendered element 
-             * it can fetch the new image and fade to it 
+             * it can fetch the new image when it's finished loading
              */
             attrs.$observe('lazyLoad', function(newSrc) {
                 if (newSrc == "") return;
@@ -24,8 +27,8 @@ angular.module('TF2.directives.lazyload', [])
                 iElement.attr('style', iElement.attr('style'));
 
                 /** 
-                 * Use some oldskool preloading techniques to load the image
-                 * and fade it in when done 
+                 * Use some oldskool preloading techniques to load
+                 * the image done 
                  */
                 var img = $document[0].createElement('img');
                 img.onload = function() {

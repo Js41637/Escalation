@@ -1,10 +1,13 @@
+// Register as angular module
 angular.module('TF2.controllers.main', [])
 
+//Register controller
 .controller('MainCtrl', function($scope) {
 
   $scope.items = [];
   $scope.selected = null;
 
+  // Simple database that contains all the items and their info
   $scope.items = [
     {
       id: "0",
@@ -80,6 +83,10 @@ angular.module('TF2.controllers.main', [])
     }
   ]
 
+  /* @Param = id of item in the database/array
+   *
+   * Function set what weapon is currently selected by ID
+   */
   $scope.setActive = function(itemid) {
     $scope.selected = itemid;
     console.log("Selected item: ", itemid);
