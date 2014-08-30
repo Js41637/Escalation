@@ -1,0 +1,80 @@
+<html ng-app="myApp">
+<head>
+<script src="!resources/js/jquery/jquery-1.10.2.js"></script>
+<script src="!resources/js/jquery/jquery-ui.js"></script>
+<script src="!resources/js/angular.min.js"></script>
+<script src="!resources/js/angular-animate.min.js"></script>
+<script src="!resources/js/bootstrap.min.js"></script>
+<script src="!resources/js/main.js"></script>
+<link rel="stylesheet" href="!resources/css/bootstrap.min.css">
+<link rel="stylesheet" href="!resources/css/main.css">
+</head>
+<body>
+  <div class="container">
+    <div ng-controller="testing">
+    <div class="page-header" style="text-align: left">
+      <h1>Escalation <small style="font-size:42%;position:absolute;top:30px;margin-left:-30;">Beta</small> <small>Or something along those lines...</small></h1>
+    </div>
+    <div class="weapons-container">
+      <div class="alert alert-info alert-dismissible" style="margin: 0 20% 20 20%" role="alert">
+        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        Select a weapon to view detailed information about it
+      </div>
+      <div ng-class="{'selectedweapon' : selected != null, 'selectedweapon-hide' : selected == null}">
+        <div ng-if="selected != null">
+          <table style="width:100%">
+            <tr>
+              <td class="item">
+                <div class="itemimg itemimg-lrg" style="margin:10px" lazy-load="weapons/{{items[selected].img}}_large.png"></div>
+              </td>
+              <td style="vertical-align:top">
+                <table>
+                  <tr style="height:70px">
+                    <td style="border-bottom:3px solid #FFD700;padding:3px;">
+                      <h2>{{items[selected].name}}</h2>
+                      <i class="desc">{{items[selected].desc}}</i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="input-group" style="width:200px; margin:0 auto">
+        <input type="text" class="form-control" placeholder="Search Weapon" ng-model="search.name">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+      </div>
+      <div class="weaponboxcontainer">
+        <div class="box-things" ng-repeat="item in items | filter:search" ng-click="setActive(item.id)">
+        <div>
+          <div class="itemimg" style="margin-left:auto;margin-right:auto" lazy-load="weapons/{{item.img}}.png"></div>
+        </div>
+        <div style="text-align:center">
+          <h3>{{item.name}}</h3>
+        </div>
+        <div class="desc">
+          <i>{{item.desc}}</i>
+        </div>
+        <div class="upgrades">
+          <ul>
+            <li class="att_positive" ng-repeat="positive in item.positive">{{positive.name}}</li>
+            <li class="att_negative" ng-repeat="negative in item.negative">{{negative.name}}</li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      <div class="alert alert-danger" role="alert" ng-show="(items | filter: search).length == 0" style="width:50%;margin:10 auto">
+        <strong>Oh No!</strong>
+        <p>'{{search.name}}' did not return any results.</p>
+        <p>Sorry :(</p>
+      </div>
+    </div>
+</div>
+</body>
+</html>
