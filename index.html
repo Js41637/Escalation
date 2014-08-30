@@ -1,17 +1,19 @@
-<html ng-app="myApp">
+<html ng-app="tf2">
 <head>
-<script src="!resources/js/jquery/jquery-1.10.2.js"></script>
-<script src="!resources/js/jquery/jquery-ui.js"></script>
-<script src="!resources/js/angular.min.js"></script>
-<script src="!resources/js/angular-animate.min.js"></script>
-<script src="!resources/js/bootstrap.min.js"></script>
-<script src="!resources/js/main.js"></script>
-<link rel="stylesheet" href="!resources/css/bootstrap.min.css">
-<link rel="stylesheet" href="!resources/css/main.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+  <script src="./js/vendor/jquery-1.11.1.min.js"></script>
+  <script src="./js/vendor/angular.min.js"></script>
+  <script src="./js/vendor/angular-animate.min.js"></script>
+  <script src="./js/vendor/bootstrap.min.js"></script>
+  <script src="./js/controllers/MainCtrl.js"></script>
+  <script src="./js/directives/lazyLoad.js"></script>
+  <script src="./js/app.js"></script>
+  
   <div class="container">
-    <div ng-controller="testing">
+    <div ng-controller="MainCtrl">
     <div class="page-header" style="text-align: left">
       <h1>Escalation <small style="font-size:42%;position:absolute;top:30px;margin-left:-30;">Beta</small> <small>Or something along those lines...</small></h1>
     </div>
@@ -25,7 +27,7 @@
           <table style="width:100%">
             <tr>
               <td class="item">
-                <div class="itemimg itemimg-lrg" style="margin:10px" lazy-load="weapons/{{items[selected].img}}_large.png"></div>
+                <div class="itemimg itemimg-lrg" style="margin:10px" lazy-load="img/weapons/{{items[selected].img}}_large.png"></div>
               </td>
               <td style="vertical-align:top">
                 <table>
@@ -53,7 +55,7 @@
       <div class="weaponboxcontainer">
         <div class="box-things" ng-repeat="item in items | filter:search" ng-click="setActive(item.id)">
         <div>
-          <div class="itemimg" style="margin-left:auto;margin-right:auto" lazy-load="weapons/{{item.img}}.png"></div>
+          <div class="itemimg" style="margin-left:auto;margin-right:auto" lazy-load="img/weapons/{{item.img}}.png"></div>
         </div>
         <div style="text-align:center">
           <h3>{{item.name}}</h3>
