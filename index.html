@@ -10,6 +10,7 @@
   <script src="./js/vendor/bootstrap.min.js"></script>
   <script src="./js/controllers/MainCtrl.js"></script>
   <script src="./js/directives/lazyLoad.js"></script>
+  <script src="./js/directives/itemInfo.js"></script>
   <script src="./js/app.js"></script>
   
   <div class="container">
@@ -53,6 +54,8 @@
         <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
       </div>
       <div class="weaponboxcontainer">
+        <iteminfo ng-repeat="item in items | filter:search" data="item" ng-click="setActive(item.id)"></itemInfo>
+      <!--
         <div class="box-things" ng-repeat="item in items | filter:search" ng-click="setActive(item.id)">
         <div>
           <div class="itemimg" style="margin-left:auto;margin-right:auto" lazy-load="img/weapons/{{item.img}}.png"></div>
@@ -70,6 +73,7 @@
           </ul>
         </div>
         </div>
+      -->
       </div>
       <div class="alert alert-danger" role="alert" ng-show="(items | filter: search).length == 0" style="width:50%;margin:10 auto">
         <strong>Oh No!</strong>

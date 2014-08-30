@@ -1,0 +1,17 @@
+<div class="box-things">
+<div>
+  <div class="itemimg" style="margin-left:auto;margin-right:auto" lazy-load="img/weapons/{{item.img}}.png"></div>
+</div>
+<div style="text-align:center">
+  <h3>{{item.name}}</h3>
+</div>
+<div class="desc">
+  <i>{{item.desc}}</i>
+</div>
+<div class="upgrades">
+  <ul>
+    <li class="att_positive" ng-repeat="positive in item.positive">{{positive.name}}</li>
+    <li class="att_negative" ng-repeat="negative in item.negative">{{negative.name}}</li>
+  </ul>
+</div>
+</div>
