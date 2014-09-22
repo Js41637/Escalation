@@ -25,6 +25,56 @@ angular.module('TF2.controllers.main', [])
           name: "25% slower reload speed",
           desc: ".."
         }
+      ],
+      levels: [
+        {
+          name: "Upgrade 1",
+          cost: "$1",
+          positive: [
+            {
+              name: "+2 Clip Size",
+              desc: "..."
+            }
+          ],
+          negative: [
+            {
+              name: "25% slower reload speed",
+              desc: "..."
+            }
+          ]
+        },
+        {
+          name: "Upgrade 2",
+          cost: "$2",
+          positive: [
+            {
+              name: "+4 Clip Size",
+              desc: "..."
+            }
+          ],
+          negative: [
+            {
+              name: "50% slower reload speed",
+              desc: "..."
+            }
+          ]
+        },
+        {
+          name: "Upgrade 3",
+          cost: "$3",
+          positive: [
+            {
+              name: "+6 Clip Size",
+              desc: "..."
+            }
+          ],
+          negative: [
+            {
+              name: "75% slower reload speed",
+              desc: "..."
+            }
+          ]
+        },
       ]
     },
     {
@@ -43,6 +93,56 @@ angular.module('TF2.controllers.main', [])
           name: "15% slower fire speed",
           desc: ".."
         }
+      ],
+      levels: [
+        {
+          name: "Upgrade 1",
+          cost: "$1",
+          positive: [
+            {
+              name: "+5 Clip Size",
+              desc: "..."
+            }
+          ],
+          negative: [
+            {
+              name: "5% slower spinup speed",
+              desc: "..."
+            }
+          ]
+        },
+        {
+          name: "Upgrade 2",
+          cost: "$2",
+          positive: [
+            {
+              name: "+10 Clip Size",
+              desc: "..."
+            }
+          ],
+          negative: [
+            {
+              name: "10% slower spinup speed",
+              desc: "..."
+            }
+          ]
+        },
+        {
+          name: "Upgrade 3",
+          cost: "$3",
+          positive: [
+            {
+              name: "+20 Clip Size",
+              desc: "..."
+            }
+          ],
+          negative: [
+            {
+              name: "15% slower spinup speed",
+              desc: "..."
+            }
+          ]
+        },
       ]
     },
     {
@@ -61,6 +161,56 @@ angular.module('TF2.controllers.main', [])
           name: "10% slower movement speed",
           desc: ".."
         }
+      ],
+      levels: [
+        {
+          name: "Upgrade 1",
+          cost: "$50",
+          positive: [
+            {
+              name: "+1 ball",
+              desc: "..."
+            }
+          ],
+          negative: [
+            {
+              name: "5% slower speed",
+              desc: "..."
+            }
+          ]
+        },
+        {
+          name: "Upgrade 2",
+          cost: "$100",
+          positive: [
+            {
+              name: "+50 balls",
+              desc: "..."
+            }
+          ],
+          negative: [
+            {
+              name: "25% less health",
+              desc: "..."
+            }
+          ]
+        },
+        {
+          name: "Upgrade 3",
+          cost: "$10000",
+          positive: [
+            {
+              name: "+500 balls",
+              desc: "..."
+            }
+          ],
+          negative: [
+            {
+              name: "Start off with 1 HP",
+              desc: "..."
+            }
+          ]
+        },
       ]
     },
     {
@@ -79,6 +229,56 @@ angular.module('TF2.controllers.main', [])
           name: "15% slower movement speed",
           desc: ".."
         }
+      ],
+      levels: [
+        {
+          name: "Upgrade 1",
+          cost: "$2",
+          positive: [
+            {
+              name: "+15% afterburn damage",
+              desc: "..."
+            }
+          ],
+          negative: [
+            {
+              name: "10% less ammo",
+              desc: "..."
+            }
+          ]
+        },
+        {
+          name: "Upgrade 2",
+          cost: "$5",
+           positive: [
+            {
+              name: "+20% afterburn damage",
+              desc: "..."
+            }
+          ],
+          negative: [
+            {
+              name: "20% less ammo",
+              desc: "..."
+            }
+          ]
+        },
+        {
+          name: "Upgrade 3",
+          cost: "$7",
+           positive: [
+            {
+              name: "+25% afterburn damage",
+              desc: "..."
+            }
+          ],
+          negative: [
+            {
+              name: "30% less ammo",
+              desc: "..."
+            }
+          ]
+        },
       ]
     }
   ]

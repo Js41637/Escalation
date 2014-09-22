@@ -39,12 +39,22 @@
   font-family: TF2 Secondary, Verdana, Geneva, sans-serif;
   margin-left: 3px;
 }
+.selectedweapon .upgrades div {
+  padding: 5px 10px;
+  display: inline-block;
+  width: 33%;
+  height: 137px;
+  border-right: 2px solid yellow;
+}
+.selectedweapon .upgrades div:last-child {
+  border-right: 0;
+}
 
 .box-things {
   margin: 20px;
   display: inline-block;
   vertical-align: top;
-  width: 250px;
+  width: 220px;
   background-color: rgb(50, 46, 41);
   border-radius: 20px;
   transition:all linear 0.5s;
