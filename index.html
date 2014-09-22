@@ -27,28 +27,22 @@
         <div ng-if="selected != null">
           <table style="width:100%">
             <tr>
-              <td class="item">
+              <!-- Large Weapon Image -->
+              <td class="item" rowspan="2">
                 <div class="itemimg itemimg-lrg" style="margin:10px" lazy-load="img/weapons/{{items[selected].img}}_large.png"></div>
               </td>
-              <td style="vertical-align:top">
-                <table style="width:100%;height:209px">
-                  <tr style="height:70px">
-                    <td style="border-bottom:3px solid #FFD700;padding:3px;">
-                      <h2>{{items[selected].name}}</h2>
-                      <i class="desc">{{items[selected].desc}}</i>
-                    </td>
-                  </tr>
-                  <tr style="color:grey" class="upgrades">
-                    <td>
-                      <div ng-repeat="level in items[selected].levels | limitTo:3">
-                        {{level.name}}</br>
-                        Cost: {{level.cost}}</br>
-                        <li class="att_positive" ng-repeat="positive in level.positive">{{positive.name}}</li>
-                        <li class="att_negative" ng-repeat="negative in level.negative">{{negative.name}}</li>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
+              <!-- Item name and desc -->
+              <td class="namedesc" colspan="3">
+                <h2>{{items[selected].name}}</h2>
+                <i class="desc">{{items[selected].desc}}</i>
+              </td>
+            </tr>
+            <tr style="color:grey" class="upgrades">
+              <td ng-repeat="level in items[selected].levels | limitTo:3">
+                <h3>{{level.name}}</h3>
+                Cost: {{level.cost}}</br>
+                <li class="att_positive" ng-repeat="positive in level.positive">{{positive.name}}</li>
+                <li class="att_negative" ng-repeat="negative in level.negative">{{negative.name}}</li>
               </td>
             </tr>
           </table>
