@@ -36,7 +36,7 @@ angular.module('TF2.directives.lazyload', [])
                     iElement.css('background-image', 'url(' + this.src + ')');
                 };
                 img.onerror = function(e) {
-                    console.log("image load error!", e);
+                    //console.log("image load error!", e);
                     iElement.css({
                         'opacity': '1'
                     });

@@ -4,6 +4,7 @@
   text-align: center;
   min-width: 650px;
 }
+
 .selectedweapon {
   position: relative;
   background-color: rgb(50, 46, 41);
@@ -13,24 +14,17 @@
   margin-bottom: 10px;
   border: 3px solid #FFD700;
   border-radius: 25px;
-  transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
+  height: 0px;
+  overflow: hidden;
+}
+.selectedweapon.show {
+  height: 203px;
 }
 .selectedweapon h3 {
   margin: 1px;
   font-size: 16px;
-}
-.selectedweapon-hide {
-  height: 0;
-  border: 0;
-  margin-left: 50px;
-  margin-right: 50px;
-}
-.selectedweapon .show {
-  height: 0;
-  border: 0;
-  margin-left: 50px;
-  margin-right: 50px;
 }
 .selectedweapon .item {
   border-right: 3px solid #FFD700;

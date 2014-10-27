@@ -4,6 +4,7 @@ angular.module('TF2.controllers.main', [])
 //Register controller
 .controller('MainCtrl', function($scope) {
 
+  $scope.hidemsg = false;
   $scope.items = [];
   $scope.selected = null;
 
@@ -14,13 +15,13 @@ angular.module('TF2.controllers.main', [])
       name: "Force-A-Nature",
       img: "force-a-nature",
       desc: "The Force-A-Nature is a F2P's goto weapon of choice when it comes to attempting to rek",
-      positive: [
+      base_positive: [
         {
           name: "+2 Clip Size",
           desc: ".."
         }
       ],
-      negative: [
+      base_negative: [
         {
           name: "25% slower reload speed",
           desc: ".."
@@ -82,13 +83,13 @@ angular.module('TF2.controllers.main', [])
       name: "Minigun",
       img: "minigun",
       desc: "I dunno, something",
-      positive: [
+      base_positive: [
         {
           name: "+25% clip size",
           desc: ".."
         }
       ],
-      negative: [
+      base_negative: [
         {
           name: "15% slower fire speed",
           desc: ".."
@@ -150,13 +151,13 @@ angular.module('TF2.controllers.main', [])
       name: "The Sandman",
       img: "sandman",
       desc: "Throw your balls at people",
-      positive: [
+      base_positive: [
         {
           "name": "+25% recharge rate",
           "desc": ".."
         }
       ],
-      negative: [
+      base_negative: [
         {
           name: "10% slower movement speed",
           desc: ".."
@@ -218,13 +219,13 @@ angular.module('TF2.controllers.main', [])
       name: "Degreaser",
       img: "degreaser",
       desc: "Burneh burneh people",
-      positive: [
+      base_positive: [
         {
           name: "+25% afterburn damage",
           desc: ".."
         }
       ],
-      negative: [
+      base_negative: [
         {
           name: "15% slower movement speed",
           desc: ".."
